@@ -1,5 +1,5 @@
 /**
- * 
+ * @author Lars Nordstrom <lars.nordstrom@jgy.se>
  */
 const express = require("express");
 const morgan = require("morgan");
@@ -23,16 +23,18 @@ app.use(bodyParser.json({ type: 'application/*+json' }));
 // Logging
 app.use(morgan("dev"));
 
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-  });
+// 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 // Routes
 app.use(userRoute);
 app.use(homeRoute);
 
+// Start the server.
 app.listen(PORT, () => {
     console.log("Server started on port " + PORT);
 });
