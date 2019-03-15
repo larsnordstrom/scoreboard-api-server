@@ -1,0 +1,30 @@
+{
+  "name": "scoreboard-api-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larsnordstrom/scoreboard-api-server.git"
+  },
+  "author": "Lars Nordstrom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/larsnordstrom/scoreboard-api-server/issues"
+  },
+  "homepage": "https://github.com/larsnordstrom/scoreboard-api-server#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "helmet": "^3.16.0",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
